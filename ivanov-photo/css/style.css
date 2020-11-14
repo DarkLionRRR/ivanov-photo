@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 auto;
   max-width: 1227px;
 }
+@media screen and (max-width: 1700px) {
+  .container { max-width: 896px; }
+}
+@media screen and (max-width: 1199px) {
+  .container { max-width: 720px; }
+}
 
 .headline, .headline-light {
   font-family: 'Yeseva One', cursive;
@@ -53,8 +59,26 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   height: 100vh;
   background: url('../img/header-bg.jpg') no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
   position: relative;
+}
+@media screen and (max-width: 1700px) {
+  .header {
+    background: url('../img/header-bg-2.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header {
+    background-position: 50% 35%;
+  }
+}
+@media screen and (height: 1366px) and (width: 1024px) {
+  .header {
+    background-position: 70% 0%;
+  }
 }
 
 .header-top {
@@ -66,6 +90,12 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 1399px) {
+  .header-top { padding: 40px; }
+}
+@media screen and (max-width: 1199px) {
+  .header-top { padding: 20px; }
 }
 
 .logo {
@@ -84,6 +114,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-content { padding-top: 212px; }
+@media screen and (max-width: 1700px) {
+  .header-content { padding-top: 183px; }
+}
+@media screen and (max-width: 1199px) {
+  .header-content { padding-top: 150px; }
+}
 
 .header__title {
   color: #fff;
@@ -91,6 +127,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 5rem;
   font-weight: 400;
   max-width: 311px;
+  margin-left: -5px;
 }
 
 .header__subtitle {
@@ -108,12 +145,21 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 180px;
   height: auto;
 }
+@media screen and (max-width: 1700px) {
+  .header-photo { max-width: 140px; }
+}
 
 .header-gallery {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 80px;
+}
+@media screen and (max-width: 1399px) {
+  .header-gallery { padding: 40px; }
+}
+@media screen and (max-width: 1199px) {
+  .header-gallery { padding: 20px; }
 }
 
 .header-photo:not(:last-child) { margin-right: 20px; }
@@ -130,6 +176,18 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media screen and (max-width: 1399px) {
+  .navbar { 
+    padding-right: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .navbar { 
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .navbar-list {
