@@ -1,0 +1,32 @@
+.menu-open,
+.link-down { display: none; }
+.menu-open {
+  outline: none;
+  border: none;
+  background: none;
+}
+.link-down {
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #4B9EFF;
+  align-items: center;
+  transform-origin: bottom right;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 70px;
+  right: 15px;
+}
+.header__arrow-down {
+  display: inline-block;
+  width: 26px;
+  height: 14px;
+  transform: rotate(180deg) translate(10px);
+}
+
+@media screen and (max-width: 991px) {
+  .menu-open { display: block; }
+}
+@media screen and (max-width: 767px) {
+  .link-down { display: flex; }
+}
