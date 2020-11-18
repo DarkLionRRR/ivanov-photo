@@ -24,9 +24,138 @@
   transform: rotate(180deg) translate(10px);
 }
 
+.nav-collapse.show {
+  display: block;
+  animation: fadeInMenuBg .3s ease .1s forwards;
+}
+.nav-collapse {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  transition: all .5s;
+}
+@keyframes fadeInMenuBg {
+  from {
+    background: rgba(24, 24, 24, 0);
+  }
+  to {
+    background: rgba(24, 24, 24, .8);
+  }
+}
+@keyframes fadeOutMenuBg {
+  from {
+    background: rgba(24, 24, 24, .8);
+  }
+  to {
+    background: rgba(24, 24, 24, 0);
+  }
+}
+
+.nav-body.show { animation: fadeInMenu .3s ease .1s forwards; }
+.nav-body {
+  padding: 1.875rem;
+  padding-bottom: 6.1875rem;
+  background: #fff;
+  transform: translateY(-100%);
+  transition: transform .3s;
+}
+@keyframes fadeInMenu {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutMenu {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.nav-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo { max-width: 90px; }
+.nav-close {
+  outline: none;
+  border: none;
+  background: none;
+}
+.nav-row {
+  display: flex;
+  margin-left: 12%;
+  margin-top: 3.0625rem;
+}
+.nav-phone {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #2A7CDD;
+}
+.collapse__social-list {
+  margin-top: 2.5rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.collapse__social-list li:not(:first-child) { margin-left: 1.875rem; }
+.nav-col:last-child {
+  margin-left: 7.4375rem;
+}
+.collapse-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.collapse-list li:not(:first-child) { margin-top: 2.5rem; }
+.collapse-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #2A7CDD;
+}
+
 @media screen and (max-width: 991px) {
   .menu-open { display: block; }
 }
 @media screen and (max-width: 767px) {
   .link-down { display: flex; }
+  .nav-body {
+    padding: 1.25rem;
+    padding-bottom: 3.125rem;
+  }
+  .nav-logo { max-width: 60px; }
+  .nav-row {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    margin-top: 3.9375rem;
+    align-items: center;
+  }
+  .nav-col:first-child {
+    margin-top: 4.1875rem;
+    text-align: center;
+  }
+  .nav-col:last-child { margin-left: 0; }
+  .collapse-list li:not(:first-child) {
+    margin-top: 1.5625rem;
+  }
+  .collapse-list li { 
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
